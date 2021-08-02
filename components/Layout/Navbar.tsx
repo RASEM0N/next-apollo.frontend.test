@@ -1,64 +1,43 @@
 import React, { FC } from 'react'
+import { Navbar, Nav } from 'react-bootstrap'
 import Link from 'next/link'
 
-const Navbar: FC = () => {
+const AppNavbar: FC = () => {
     return (
         <div className="navbar-wrapper">
-            <nav className="navbar navbar-expand-lg navbar-dark fj-mw9">
-                <Link href="/">
-                    <a className="navbar-brand mr-3 font-weight-bold">FilipJerga</a>
+            <Navbar expand="lg" className="navbar-dark fj-mw9">
+                <Link href="/" passHref>
+                    <Navbar.Brand className="mr-3 font-weight-bold" href="#">
+                        FilipJerga
+                    </Navbar.Brand>
                 </Link>
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon" />
-                </button>
-
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav">
-                        <li className="nav-item mr-3">
-                            <Link href="/portfolios">
-                                <a className="nav-link">Portfolio</a>
-                            </Link>
-                        </li>
-                        <li className="nav-item mr-3">
-                            <a className="nav-link" href="#">
-                                Courses
-                            </a>
-                        </li>
-                        <li className="nav-item mr-3">
-                            <a className="nav-link" href="#">
-                                Cv
-                            </a>
-                        </li>
-                        <li className="nav-item mr-3">
-                            <a className="nav-link" href="#">
-                                Ask me
-                            </a>
-                        </li>
-                    </ul>
-                    <ul className="navbar-nav ml-auto">
-                        <li className="nav-item mr-3">
-                            <a className="nav-link" href="#">
-                                Sign Up
-                            </a>
-                        </li>
-                        <li className="nav-item mr-3">
-                            <a className="nav-link btn btn-success bg-green-2 bright" href="#">
+                <Navbar.Toggle />
+                <Navbar.Collapse>
+                    <Nav className="mr-auto">
+                        <Link href="/portfolios" passHref>
+                            <Nav.Link className="mr-3">Portfolios</Nav.Link>
+                        </Link>
+                        <Link href="/forum/categories" passHref>
+                            <Nav.Link className="mr-3">Forum</Nav.Link>
+                        </Link>
+                        <Link href="/cv" passHref>
+                            <Nav.Link className="mr-3">Cv</Nav.Link>
+                        </Link>
+                    </Nav>
+                    <Nav>
+                        <Link href="/register" passHref>
+                            <Nav.Link className="mr-3">Sign Up</Nav.Link>
+                        </Link>
+                        <Link href="/login" passHref>
+                            <Nav.Link className="mr-3 btn btn-success bg-green-2 bright">
                                 Sign In
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                            </Nav.Link>
+                        </Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         </div>
     )
 }
 
-export default Navbar
+export default AppNavbar
