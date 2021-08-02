@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { withLayout } from 'components/Layout'
-import { NextPage } from 'next'
+import { NextPage, NextPageContext } from 'next'
 
-const Portfolios: NextPage = () => {
+interface PortfoliosProps {
+    testText?: string
+}
+
+const Portfolios: FC<PortfoliosProps> = ({ testText }): JSX.Element => {
     return (
         <>
+            <h1>{testText}</h1>
             <section className="section-title">
                 <div className="px-2">
                     <div className="pt-5 pb-4">
@@ -65,4 +70,16 @@ const Portfolios: NextPage = () => {
     )
 }
 
-export default withLayout(Portfolios)
+const PortfoliosWithLayout: NextPage = withLayout(Portfolios)
+
+// initial props задержка в 3с
+// сначала выполняется на сервере (запуск)
+// при переходах (Link) на клиенте
+// PortfoliosWithLayout.getInitialProps = async (ctx: NextPageContext) => {
+//     await new Promise((r) => setTimeout(r, 3000))
+//     return {
+//         testText: undefined,
+//     }
+// }
+
+export default PortfoliosWithLayout
