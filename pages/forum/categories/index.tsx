@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { withLayout } from 'components/Layout'
+import Container from 'components/Container'
 
-const Categories = () => {
+const Categories: FC = () => {
     return (
-        <div className="container">
+        <Container>
             <section className="section-title">
                 <div className="px-2">
                     <div className="pt-5 pb-4">
@@ -60,7 +61,7 @@ const Categories = () => {
                     </div>
                 </div>
             </section>
-        </div>
+        </Container>
     )
 }
 
