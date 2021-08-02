@@ -1,4 +1,3 @@
-import { withLayout } from 'components/Layout'
 import React from 'react'
 import { NextPage } from 'next'
 
@@ -48,4 +47,4 @@ const Topics: NextPage = () => {
     )
 }
 
-export default withLayout(Topics)
+export default Topics

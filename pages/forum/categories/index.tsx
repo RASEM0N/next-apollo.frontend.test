@@ -1,5 +1,4 @@
 import React from 'react'
-import { withLayout } from 'components/Layout'
 import { NextPage } from 'next'
 
 const Categories: NextPage = () => {
@@ -65,4 +64,4 @@ const Categories: NextPage = () => {
     )
 }
 
-export default withLayout(Categories)
+export default Categories

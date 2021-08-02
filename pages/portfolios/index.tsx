@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import { withLayout } from 'components/Layout'
 import { NextPage, NextPageContext } from 'next'
 
 interface PortfoliosProps {
@@ -70,8 +69,6 @@ const Portfolios: FC<PortfoliosProps> = ({ testText }): JSX.Element => {
     )
 }
 
-const PortfoliosWithLayout: NextPage = withLayout(Portfolios)
-
 // initial props задержка в 3с
 // сначала выполняется на сервере (запуск)
 // при переходах (Link) на клиенте
@@ -82,4 +79,4 @@ const PortfoliosWithLayout: NextPage = withLayout(Portfolios)
 //     }
 // }
 
-export default PortfoliosWithLayout
+export default Portfolios

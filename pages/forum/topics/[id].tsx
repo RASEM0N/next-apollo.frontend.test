@@ -2,7 +2,6 @@
 // noinspection HtmlRequiredAltAttribute
 
 import React from 'react'
-import { withLayout } from 'components/Layout'
 import { NextPage } from 'next'
 
 const Posts: NextPage = () => {
@@ -170,4 +169,4 @@ const Posts: NextPage = () => {
     )
 }
 
-export default withLayout(Posts)
+export default Posts

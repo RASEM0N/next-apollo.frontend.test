@@ -1,4 +1,3 @@
-import { withLayout } from 'components/Layout'
 import React from 'react'
 import { NextPage } from 'next'
 
@@ -36,4 +35,4 @@ const Login: NextPage = () => {
     )
 }
 
-export default withLayout(Login)
+export default Login

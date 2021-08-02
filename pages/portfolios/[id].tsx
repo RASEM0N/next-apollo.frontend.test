@@ -1,4 +1,3 @@
-import { withLayout } from 'components/Layout'
 import React from 'react'
 import { useRouter } from 'next/router'
 import { NextPage } from 'next'
@@ -17,4 +16,4 @@ const PortfolioDetail: NextPage = () => {
 //     return { query }
 // }
 
-export default withLayout(PortfolioDetail)
+export default PortfolioDetail

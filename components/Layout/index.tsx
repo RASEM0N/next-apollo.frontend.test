@@ -1,36 +1,23 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import Navbar from './Navbar'
-import Footer from './Footer'
 import Container from 'components/Container'
+import Hero from 'components/Hero'
+import Footer from './Footer'
 
 interface LayoutProps {
     children: React.ReactNode | React.ReactNodeArray
+    isHomePage: boolean
 }
 
-const Layout = ({ children }: LayoutProps): JSX.Element => {
+const Layout = ({ children, isHomePage }: LayoutProps): JSX.Element => {
     return (
         <div className="portfolio-app">
             <Navbar />
-            {children}
+            {isHomePage && <Hero />}
+            <Container>{children}</Container>
+            {isHomePage && <Footer />}
         </div>
     )
 }
 
 export default Layout
-
-export const withLayout = <T extends Record<string, unknown>>(Component: FunctionComponent<T>) => {
-    return (props: T): JSX.Element => (
-        <Layout>
-            {Component.name === 'Home' ? (
-                <>
-                    <Component {...props} />
-                    <Footer />
-                </>
-            ) : (
-                <Container>
-                    <Component {...props} />
-                </Container>
-            )}
-        </Layout>
-    )
-}
