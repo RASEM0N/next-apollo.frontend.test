@@ -1,13 +1,13 @@
 /* eslint-disable */
 // noinspection HtmlRequiredAltAttribute
 
-import React, { FC } from 'react'
-import Container from 'components/Container'
+import React from 'react'
 import { withLayout } from 'components/Layout'
+import { NextPage } from 'next'
 
-const Posts: FC = () => {
+const Posts: NextPage = () => {
     return (
-        <Container>
+        <>
             <section className="section-title">
                 <div className="px-2">
                     <div className="pt-5 pb-4">
@@ -166,7 +166,7 @@ const Posts: FC = () => {
                     </div>
                 </div>
             </section>
-        </Container>
+        </>
     )
 }
 

@@ -1,15 +1,14 @@
 import { withLayout } from 'components/Layout'
 import React from 'react'
 import { useRouter } from 'next/router'
-import { NextComponentType } from 'next'
-import Container from 'components/Container'
+import { NextPage } from 'next'
 
-const PortfolioDetail: NextComponentType = () => {
+const PortfolioDetail: NextPage = () => {
     const router = useRouter()
     return (
-        <Container>
+        <>
             <div>Portfolio</div>
-        </Container>
+        </>
     )
 }
 

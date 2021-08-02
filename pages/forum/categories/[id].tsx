@@ -1,10 +1,10 @@
 import { withLayout } from 'components/Layout'
-import React, { FC } from 'react'
-import Container from 'components/Container'
+import React from 'react'
+import { NextPage } from 'next'
 
-const Topics: FC = () => {
+const Topics: NextPage = () => {
     return (
-        <Container>
+        <>
             <section className="section-title">
                 <div className="px-2">
                     <div className="pt-5 pb-4">
@@ -44,7 +44,7 @@ const Topics: FC = () => {
                     </tbody>
                 </table>
             </section>
-        </Container>
+        </>
     )
 }
 

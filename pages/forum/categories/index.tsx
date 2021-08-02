@@ -1,10 +1,10 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { withLayout } from 'components/Layout'
-import Container from 'components/Container'
+import { NextPage } from 'next'
 
-const Categories: FC = () => {
+const Categories: NextPage = () => {
     return (
-        <Container>
+        <>
             <section className="section-title">
                 <div className="px-2">
                     <div className="pt-5 pb-4">
@@ -61,7 +61,7 @@ const Categories: FC = () => {
                     </div>
                 </div>
             </section>
-        </Container>
+        </>
     )
 }
 

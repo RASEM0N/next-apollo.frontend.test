@@ -30,8 +30,8 @@ $teal: #0085a1 !default;
 $cyan: #17a2b8 !default;
 
 body {
+    overflow-y: visible;
     -webkit-font-smoothing: antialiased;
-    background-color: $white;
     font-family: sans-serif;
     margin: 0;
     padding: 0;

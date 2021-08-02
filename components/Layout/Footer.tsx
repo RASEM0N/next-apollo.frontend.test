@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const Footer = () => {
+const Footer: FC = () => {
     return (
         <footer id="sticky-footer" className="py-4 bg-black text-white-50 py-3">
             <div className="container text-center">

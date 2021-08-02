@@ -1,12 +1,13 @@
 /* eslint-disable */
 // noinspection HtmlRequiredAltAttribute
 
-import React, { FC } from 'react'
-import Layout, { withLayout } from 'components/Layout'
+import React from 'react'
+import { withLayout } from 'components/Layout'
 import Hero from 'components/Hero'
 import Container from 'components/Container'
+import { NextPage } from 'next'
 
-const Home: FC = () => {
+const Home: NextPage = () => {
     return (
         <React.Fragment>
             <Hero />
